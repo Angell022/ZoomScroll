@@ -1,11 +1,54 @@
-:root {
-  --black: #333;
-  --white: #fff;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-html, body{
-  height:80%;
-  margin: 35px;
+body{
+  background-color: palevioletred;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-1{
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  background-image: url("../images/anto6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  /*border: 2px solid black;*/
+}
+#clip1 { 
+  transform: scale(1.1,1.1);
+  animation:clip1 4s linear infinite; 
+}
+#clipa {
+    transform: scale(1.1,1.1);
+    animation:clipa 9s linear infinite;  
+}
+#clip2 {
+    transform: scale(1.1,1.1); 
+    animation:clip2 5s linear infinite;  
+}
+#clipb {
+    transform: scale(1.1,1.1);
+    animation:clipb 4s linear infinite;  
+}
+#clip3 {
+    transform: scale(1.1,1.1);
+    animation:clip3 7s linear infinite;  
+}
+#clip4 {
+    transform: scale(1.1,1.1);
+    animation:clip4 6s linear infinite;  
+}
+
 @keyframes clip1{
   0%{clip-path: polygon(0% -50%, 50% -50%, -50% 50%, -100% 50% );}
   100%{clip-path: polygon(150% 50%, 200% 50%, 100% 150%, 50% 150%);}
@@ -29,36 +72,4 @@ html, body{
 @keyframes clip4{
   0%{clip-path: polygon(150% -150%, 200% -150%, 300% -50%, 250% -50%);}
   100%{clip-path: polygon(-100% 50%, -50% 50%, 50% 150%, 0% 150%);}
-}
-
-.clip{
-    filter:grayscale(1);
-   position: fixed;
-    width:80%;
-    height:80%;
-    background-image: url("../images/anto6.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform-origin:center;
-}
-#clip1 { animation:clip1 4s linear infinite; }
-#clipa {
-    transform: scale(1.1,1.1);
-    animation:clipa 9s linear infinite;  
-}
-#clip2 {
-    transform: scale(1.12,1.12); 
-    animation:clip2 5s linear infinite;  
-}
-#clipb {
-    transform: scale(1.14,1.14);
-    animation:clipb 4s linear infinite;  
-}
-#clip3 {
-    transform: scale(1.15,1.15);
-    animation:clip3 7s linear infinite;  
-}
-#clip4 {
-    transform: scale(1.13,1.13);
-    animation:clip4 6s linear infinite;  
 }
